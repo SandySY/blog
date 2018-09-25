@@ -1,2 +1,23 @@
 # blog
-欢迎来到我的博客， 我力图将其建设成为最开放的技术社区，实现纯技术交流，为开源技术的繁荣昌盛而全力以赴，竭尽所能的贡献出自己的力量
+
+> Nuxt.js project
+
+## Build Setup
+
+``` bash
+# install dependencies
+$ npm install # Or yarn install
+
+# serve with hot reload at localhost:3000
+$ npm run dev
+
+# build for production and launch server
+$ npm run build
+$ npm start
+
+# generate static project
+$ npm run generate
+```
+
+For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
+

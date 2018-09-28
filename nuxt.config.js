@@ -8,11 +8,13 @@ module.exports = {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no' },
       { hid: 'description', name: 'description', content: '博客简历前端开源技术' }
-    ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  css: [
+    '@/assets/css/animation.css',
+    '@/assets/css/main.css',
+    '@/assets/style-index.css'
+  ],
   /*
   ** Customize the progress bar color
   */

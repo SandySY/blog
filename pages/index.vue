@@ -128,6 +128,7 @@
     /*components: {
       Top, Bottom, Sidebar, ArticleBlock
     },*/
+    /*scrollToTop: true,*/
     data() {
       return {
         articles: [

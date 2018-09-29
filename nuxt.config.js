@@ -36,6 +36,12 @@ module.exports = {
         })
       }
     }
-  }
+  },
+  plugins: [
+    {
+      src: "@/plugins/components.js",
+      ssr: false
+    }
+  ]
 }
 

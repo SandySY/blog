@@ -881,7 +881,7 @@ li.L1, li.L3, li.L5, li.L7, li.L9 {
 }
 
 .contractmethod {
-  color: #3498db;
+  color: #ffd194;
   text-decoration: none;
   float: left;
   margin-left: 16px;
@@ -891,7 +891,7 @@ li.L1, li.L3, li.L5, li.L7, li.L9 {
 }
 
 .contractmethod:hover {
-  color: #2980b9;
+  color: #ffc1c6;
   text-decoration: none;
   -moz-transition: all 0.2s ease-out 0s;
   -webkit-transition: all 0.2s ease-out 0s;

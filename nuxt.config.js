@@ -1,3 +1,5 @@
+const resolve = require("path").resolve;
+
 module.exports = {
   /*
   ** Headers of the page
@@ -23,9 +25,20 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    analyze: true,
+    publicPath: "/source/"
     /*
     ** Run ESLint on save
     */
+    /*ssr: false,
+    filenames: {
+      chunk: "[id].[chunkhash].js"
+    }
+    postcss: [
+      require("autoprefixer")({
+        browsers: ["> 0%"]
+      })
+    ],
     extend (config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
@@ -35,13 +48,46 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    }
+    }*/
   },
   plugins: [
     {
       src: "@/plugins/components.js",
       ssr: false
     }
-  ]
+  ],
+  generate: {
+    minify: {
+      collapseBooleanAttributes: true,
+      collapseWhitespace: false,
+      decodeEntities: true,
+      minifyCSS: true,
+      minifyJS: true,
+      processConditionalComments: true,
+      removeAttributeQuotes: false,
+      removeComments: false,
+      removeEmptyAttributes: true,
+      removeOptionalTags: true,
+      removeRedundantAttributes: true,
+      removeScriptTypeAttributes: false,
+      removeStyleLinkTypeAttributes: false,
+      removeTagWhitespace: false,
+      sortAttributes: true,
+      sortClassName: false,
+      trimCustomFragments: true,
+      useShortDoctype: true
+    }
+  },
+  router: {
+    mode: "hash",
+    middleware: [],
+    extendRoutes(routes) {
+      routes.push({
+        name: "not-found",
+        path: "*",
+        component: resolve(__dirname, "./pages/index.vue")
+      });
+    }
+  }
 }
 

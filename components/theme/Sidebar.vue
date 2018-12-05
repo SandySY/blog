@@ -32,8 +32,11 @@
       <div class="clearfix"></div>
     </div>
     <div class="block a-fadeinR right_guanggao">
-      <strong class="wt">预留位置</strong>
-      <a href="javascript: void(0);"></a>
+      <div class="widget about easy-pay">
+        <!--<img src="@/assets/images/easy_pay_image.png" alt="支付宝领红包">-->
+        <strong class="wt">领取支付宝红包</strong>
+        <a href="javascript: void(0);"></a>
+      </div>
     </div>
     <!--<div class="block a-fadeinR" style="padding-top:10px;">
         <div class="widget about" style="margin-bottom: 0;">
@@ -181,3 +184,21 @@
     }
   }
 </script>
+
+<style>
+  .easy-pay{
+    position: relative;
+  }
+  .easy-pay:after{
+    content: '';
+    position: absolute;
+    top: 39px;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    background-image: url("/assets/images/easy_pay_image.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+</style>

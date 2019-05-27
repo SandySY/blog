@@ -4,6 +4,7 @@ module.exports = {
   /*
   ** Headers of the page
   */
+  mode: "spa",
   head: {
     title: 'blog',
     meta: [
@@ -18,44 +19,44 @@ module.exports = {
     '@/assets/style-index.css'
   ],
   /*
-  ** Customize the progress bar color
+  ** Customize the progress bar color  { color: '#3B8070' }
   */
-  loading: { color: '#3B8070' },
+  loading: false,
   /*
   ** Build configuration
   */
   build: {
-    analyze: true,
-    publicPath: "/source/"
+    /*analyze: true/
     /*
     ** Run ESLint on save
     */
-    /*ssr: false,
+    ssr: false,
     filenames: {
       chunk: "[id].[chunkhash].js"
-    }
+    },
+    publicPath: "/source/",
+    babel: {
+      presets: ['es2015', 'stage-0']
+    },
     postcss: [
       require("autoprefixer")({
         browsers: ["> 0%"]
       })
     ],
-    extend (config, { isDev, isClient }) {
-      if (isDev && isClient) {
+    extend (config, ctx) {
+      if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
-          exclude: /(node_modules)/
+          exclude: /(node_modules)|(assets\/vendor)/
         })
       }
-    }*/
+    },
+    vendor: [
+      "babel-polyfill"
+    ],
   },
-  plugins: [
-    {
-      src: "@/plugins/components.js",
-      ssr: false
-    }
-  ],
   generate: {
     minify: {
       collapseBooleanAttributes: true,
@@ -78,6 +79,12 @@ module.exports = {
       useShortDoctype: true
     }
   },
+  plugins: [
+    {
+      src: "@/plugins/components.js",
+      ssr: true
+    }
+  ],
   router: {
     mode: "hash",
     middleware: [],

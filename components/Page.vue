@@ -1,17 +1,13 @@
 <template>
     <div>
-        <slot name="top"></slot>
+        <!--<slot name="top"></slot>
         <slot name="bottom">
           <h1>djs11111111111111111111k</h1>
-        </slot>
-        <div style="position: absolute;width:100%;left:0;top:0;background:#F8F8F8;z-index:1000;">
-            <transition
-                    enter-active-class="slideInRight"
-                    leave-active-class="slideOutRight"
-            >
-                <router-view></router-view>
-            </transition>
-        </div>
+        </slot>-->
+      <Top slot="top"></Top>
+      <slot></slot>
+      <Gotop></Gotop>
+      <Bottom slot="bottom"></Bottom>
     </div>
 </template>
 <script>

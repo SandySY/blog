@@ -214,7 +214,6 @@ blockquote {
 @font-face {
   font-family: 'iconfont';
   src: url("iconfont.eot"), url("iconfont.woff") format('woff'), url("iconfont.ttf") format('truetype'); /* IE9*/
-  /*src: url("iconfont.eot-#iefix")   format('embedded-opentype'), !* IE6-IE8 *! url("iconfont.woff")   format('woff'), !* chrome、firefox *! url("iconfont.ttf")   format('truetype'), !* chrome、firefox、opera、Safari, Android, iOS 4.2+*! url("iconfont.svg#iconfont")   format('svg'); !* iOS 4.1- *!*/
 }
 
 .iconfont {
@@ -446,7 +445,6 @@ blockquote {
   right: 50px;
   width: 47px;
   height: 44px;
-  display: none;
 }
 
 /* line 133, /mnt/jq/app/assets/stylesheets/layout.css.scss */

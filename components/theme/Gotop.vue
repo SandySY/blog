@@ -1,10 +1,12 @@
 <template>
-  <div class="actGotop" id="backtop" style="display: block;">
-    <a href="javascript:;" title="返回顶部"></a>
+  <div class="actGotop" id="backtop" v-show="scrollTop">
+    <a @click="goTop()" title="返回顶部"></a>
   </div>
 </template>
 
 <script>
+  import {mapGetters, mapActions} from "vuex";
+
   export default {
     name: 'Gotop',
     data() {
@@ -13,7 +15,16 @@
       }
     },
     methods: {
-
+      goTop(){
+        //返回顶部
+        (function smoothscroll() {
+          var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+          if (currentScroll > 0) {
+            window.requestAnimationFrame(smoothscroll);
+            window.scrollTo(0, currentScroll - currentScroll / 5);
+          }
+        })();
+      }
     },
     mounted(){
 
@@ -27,6 +38,11 @@
         this.$forceUpdate();
       });
     },
+    computed: {
+      ...mapGetters("window", {
+        scrollTop: "scrollTop"
+      })
+    }
   }
 </script>
 

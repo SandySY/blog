@@ -1,11 +1,13 @@
 <template>
-    <div>
+    <div class="main-lay">
         <!--<slot name="top"></slot>
         <slot name="bottom">
           <h1>djs11111111111111111111k</h1>
         </slot>-->
       <Top slot="top"></Top>
-      <slot></slot>
+      <div class="main-box">
+        <slot></slot>
+      </div>
       <Gotop></Gotop>
       <Bottom slot="bottom"></Bottom>
     </div>
@@ -61,5 +63,11 @@
     };
 </script>
 <style lang="less" scoped>
-
+  .main-lay{
+    position: relative;
+    .main-box{
+      padding-top: 80px;
+      padding-bottom: 95px;
+    }
+  }
 </style>

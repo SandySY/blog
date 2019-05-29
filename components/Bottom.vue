@@ -41,4 +41,20 @@
 
 <style scoped>
 
+  #main-footer {
+    width: 100%;
+    height: 75px;
+    padding: 10px 0;
+    background: url("../assets/images/footersub.png") repeat-x center top #dcdcdc;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+  }
+
+  #main-footer p {
+    margin-bottom: 0;
+    color: #818181;
+    text-align: left
+  }
 </style>

@@ -4,6 +4,7 @@ import Page from './Page.vue';
 import ArticleBlock from './theme/ArticleBlock.vue';
 import Sidebar from './theme/Sidebar.vue';
 import Gotop from './theme/Gotop.vue';
+import Waterfall from './theme/Waterfall.vue';
 
 export default {
   Top,
@@ -11,5 +12,6 @@ export default {
   Page,
   ArticleBlock,
   Sidebar,
-  Gotop
+  Gotop,
+  Waterfall
 }

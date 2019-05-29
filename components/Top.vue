@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar navbar-default">
+  <div class="navbar navbar-default header-top">
     <div class="container">
       <slot name="center">
       <div class="navbar-header">
@@ -17,12 +17,9 @@
       <div class="collapse navbar-collapse navbar-collapse-nav" style="height:0px;">
         <ul class="nav navbar-nav navbar-right">
           <li><a href="index.htm">首页</a></li>
-          <li><a href="archives.htm">文章存档</a></li>
-          <li><a href="about.htm">关于我</a></li>
-          <li><a href="nav.htm">前端导航</a></li>
-          <li><a href="http://sylove.xin/">前端资料库</a></li>
-          <li><a href="tools/index.htm">小工具</a></li>
-          <li><a href="page/guanggaohz.htm">合作</a></li>
+          <li><router-link :to="{name:'directory'}">目录树</router-link></li>
+          <li><router-link :to="{name:'fish-baby'}">小鱼儿</router-link></li>
+          <li><router-link :to="{name:'about-me'}">关于我</router-link></li>
           <!-- <li class="tuijian"><a href="http://how2j.cn/t/30" target="_blank" rel="nofollow">前端练手项目</a></li> -->
           <!--加推荐tuijian -->
         </ul>
@@ -64,5 +61,13 @@
 </script>
 
 <style scoped>
+  .header-top{
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+  }
 
 </style>

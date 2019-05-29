@@ -264,19 +264,6 @@ blockquote {
   color: #fff
 }
 
-#main-footer {
-  clear: both;
-  margin-top: 20px;
-  padding: 10px 0;
-  background: url("../images/footersub.png") repeat-x center top #dcdcdc
-}
-
-#main-footer p {
-  margin-bottom: 0;
-  color: #818181;
-  text-align: left
-}
-
 .title {
   margin-bottom: 5px;
   font-weight: bold;

@@ -1,14 +1,14 @@
 <template>
   <div class="sidebar">
-    <div class="block a-fadeinR" style="overflow:visible">
+    <div class="block a-fadeinR">
       <div class="widget about">
         <strong class="wt">关于sandy博客 </strong>
         <div class="wc">
-          <p style="text-indent: 20px;"></p>
-          <p style="text-indent: 20px;">
+          <p></p>
+          <p>
             sandy博客，是Sandy个人技术博客，主要记录和总结前端工作中常用的知识及我的生活。</p>
-          <p style="text-indent: 20px;">订阅博客文章，请关注下方微信号，后期会通过订阅号将文章发送到您的手机上。</p>
-          <p style="text-indent: 20px;">博客文章转载及<a href="page/guanggaohz.htm"><b>广告合作</b>请点击</a></p>
+          <p>订阅博客文章，请关注下方微信号，后期会通过订阅号将文章发送到您的手机上。</p>
+          <p>博客文章转载及<a href="page/guanggaohz.htm"><b>广告合作</b>请点击</a></p>
           <div class="sep10"></div>
         </div>
         <strong class="wt">联系方式</strong>
@@ -185,20 +185,30 @@
   }
 </script>
 
-<style>
-  .easy-pay{
-    position: relative;
+<style lang="less" scoped>
+  .sidebar{
+    .easy-pay{
+      position: relative;
+    }
+    .easy-pay:after{
+      content: '';
+      position: absolute;
+      top: 39px;
+      bottom: 0px;
+      left: 0;
+      right: 0;
+      background-image: url("/assets/images/easy_pay_image.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
   }
-  .easy-pay:after{
-    content: '';
-    position: absolute;
-    top: 39px;
-    bottom: 0px;
-    left: 0;
-    right: 0;
-    background-image: url("/assets/images/easy_pay_image.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  @media (min-width: 800px) {
+    .sidebar{
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
   }
+
 </style>

@@ -76,7 +76,14 @@
   }
 </script>
 
-<style scoped>
+<style scoped lang="less">
+  @media (min-width: 800px) {
+    #main {
+      >section{
+        margin-right: 330px;
+      }
+    }
+  }
 
 </style>
 

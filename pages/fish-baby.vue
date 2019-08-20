@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Page>
+    <Page :hasBottom="false">
       <div class="container fish-box">
         <Waterfall :imgsArr="imgsArr" @scrollLoadImg="fetchImgsData">
           <template slot-scope="props">
@@ -30,11 +30,14 @@
     methods: {
       // 假数据
       initImgsArr(n, m) { //num 图片数量
-        var arr = [];
+        var arr = [], arr1 = [];
         for (var i = n; i < m; i++) {
           arr.push({ id:i,src: require(`static/baby/baby_${i}.jpg`), link: 'https://www.baidu.com', info: '一些图片描述文字' })
         }
-        return arr.concat(arr);
+        for (var i = 1; i < 9; i++) {
+          arr.push({ id:i,src: require(`static/baby/baby_01 (${i}).jpg`), link: '', info: '' })
+        }
+        return arr.concat(arr1);
       },
 
       fetchImgsData() {
@@ -50,7 +53,7 @@
     },
     created() {
       this.imgsArr = this.initImgsArr(0, 5)
-      // this.fetchImgsArr = this.initImgsArr(5, 10) // 模拟每次请求的新的图片的数据数据
+      this.fetchImgsArr = this.imgsArr.reverse(); //this.initImgsArr(5, 10) // 模拟每次请求的新的图片的数据数据
     },
   }
 </script>

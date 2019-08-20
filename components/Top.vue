@@ -1,21 +1,16 @@
 <template>
-  <div class="navbar navbar-default header-top">
+  <div class="navbar-top">
     <div class="container">
       <slot name="center">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-nav">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
         <a class="navbar-brand" href="index.htm">
-                  <span class="logo">
-                   Sandy
-                  </span>
+          <span class="logo">
+           Sandy
+          </span>
         </a>
       </div>
-      <div class="collapse navbar-collapse navbar-collapse-nav" style="height:0px;">
-        <ul class="nav navbar-nav navbar-right">
+      <div class="navbar-collapse">
+        <ul>
           <li><a href="index.htm">首页</a></li>
           <li><router-link :to="{name:'directory'}">目录树</router-link></li>
           <li><router-link :to="{name:'fish-baby'}">小鱼儿</router-link></li>
@@ -60,14 +55,42 @@
   }
 </script>
 
-<style scoped>
-  .header-top{
+<style scoped lang="less">
+  .navbar-top{
     width: 100%;
-    height: 60px;
+    height: 100px;
+    padding: 20px 0;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 99;
-  }
+    margin-bottom: 20px;
+    background-image: linear-gradient(89deg, #30bded 0, #2085c5 100%);
+    border-color: #eee;
+    background-color: #5899d0;
+    .navbar-header{
+      .navbar-brand {
+        float: left;
+        padding: 20px 15px;
+        font-size: 24px;
+        line-height: 20px;
+        height: 60px;
+        color: #ffffff;
+      }
+    }
 
+    .navbar-collapse {
+      float: right;
+      ul li{
+        float: left;
+        display: block;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        a{
+          color: #ffffff;
+        }
+      }
+     }
+  }
 </style>

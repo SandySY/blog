@@ -9,7 +9,7 @@
         <slot></slot>
       </div>
       <Gotop></Gotop>
-      <Bottom slot="bottom"></Bottom>
+      <Bottom slot="bottom" v-show="hasBottom"></Bottom>
     </div>
 </template>
 <script>
@@ -30,6 +30,12 @@
           topHeight: 0,
           bottomHeight: 0
         };
+      },
+      props:{
+        hasBottom: {
+          type: Boolean,
+          default: true
+        }
       },
       mounted() {
         this.$nextTick(() => {
@@ -66,7 +72,7 @@
   .main-lay{
     position: relative;
     .main-box{
-      padding-top: 80px;
+      padding-top: 120px;
       padding-bottom: 95px;
     }
   }

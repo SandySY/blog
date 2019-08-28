@@ -5,6 +5,7 @@ import ArticleBlock from './theme/ArticleBlock.vue';
 import Sidebar from './theme/Sidebar.vue';
 import Gotop from './theme/Gotop.vue';
 import Waterfall from './theme/Waterfall.vue';
+import Star from "./theme/Star.vue";
 
 export default {
   Top,
@@ -13,5 +14,6 @@ export default {
   ArticleBlock,
   Sidebar,
   Gotop,
-  Waterfall
+  Waterfall,
+  Star
 }

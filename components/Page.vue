@@ -1,9 +1,5 @@
 <template>
     <div class="main-lay">
-        <!--<slot name="top"></slot>
-        <slot name="bottom">
-          <h1>djs11111111111111111111k</h1>
-        </slot>-->
       <Top slot="top"></Top>
       <div class="main-box">
         <slot></slot>

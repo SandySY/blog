@@ -11,7 +11,6 @@ export const mutations = {
         state.height = height;
     },
     SET_WINDOW_SCROLLTOP(state, { scrollTop }) {
-      console.log(scrollTop)
         state.scrollTop = scrollTop;
     }
 };

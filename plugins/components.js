@@ -1,5 +1,8 @@
 import Vue from "vue";
 import Components from "@/components";
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css'
+Vue.use(ElementUI, { size: 'mini'});
 
 console.log("开始载入Vue组件");
 for (const name in Components) {

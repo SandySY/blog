@@ -87,8 +87,14 @@
         width: 60px;
         height: 60px;
         line-height: 60px;
+        text-align: center;
         a{
           color: #ffffff;
+        }
+      }
+      @media (max-width: 800px) {
+        ul li {
+          width: 50px;
         }
       }
      }

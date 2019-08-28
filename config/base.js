@@ -89,6 +89,10 @@ module.exports = {
     {
       src: "@/plugins/initApp.js",
       ssr: true
+    },
+    {
+      src: "@/utils/index.js",
+      ssr: true
     }
   ],
   router: {

@@ -14,18 +14,20 @@
         <strong class="wt">联系方式</strong>
         <div style="position:relative;">
           <a href="http://wpa.qq.com/msgrd?v=3&uin=1655408326&site=qq&menu=yes" target="_blank" class="contractmethod">
-            <i class="iconfont" style="font-size:3em;"></i>
+            <span class="iconfont">&#xe640;</span>
           </a>
-          <a href="javascript:void(0);" class="contractmethod weixinhover">
-            <i class="iconfont" style="font-size:3em;"></i>
-            <div class="hoverimg"></div>
+          <a href="javascript:void(0);" class="contractmethod">
+            <span class="iconfont">&#xe600;</span>
           </a>
-          <a href="https://github.com/SandySY" rel="nofollow" target="_blank" class="contractmethod mt5">
-            <i class="iconfont" style="font-size:3em;"></i></a>
-          <a href="http://weibo.com/u/1962390885/home" rel="nofollow" target="_blank" class="contractmethod fzup">
-            <i class="iconfont" style="font-size:3em;"></i></a>
-          <a href="http://www.zhihu.com/people/sandyWeb" rel="nofollow" target="_blank" class="contractmethod fzup">
-            <i class="iconfont" style="font-size:3em;"></i></a>
+          <a href="https://github.com/SandySY" rel="nofollow" target="_blank" class="contractmethod">
+            <span class="iconfont">&#xe677;</span>
+          </a>
+          <a href="http://weibo.com/u/1962390885/home" rel="nofollow" target="_blank" class="contractmethod">
+            <span class="iconfont">&#xe67a;</span>
+          </a>
+          <a href="http://www.zhihu.com/people/sandyWeb" rel="nofollow" target="_blank" class="contractmethod">
+            <span class="iconfont">&#xe69a;</span>
+          </a>
           <div class="clearfix"></div>
         </div>
       </div>

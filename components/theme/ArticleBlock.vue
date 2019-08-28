@@ -5,12 +5,14 @@
     </h2>
     <div class="meta">
       <time v-text="article.time"></time>
+      <span>90次浏览</span>
     </div>
     <div class="entry">
       <h2>前言</h2>
       <div v-html="article.html"></div>
       <div class="ReadMore">
         <a href="post/web_addfont.htm">[阅读更多]</a>
+        <Star></Star>
       </div>
     </div>
   </article>

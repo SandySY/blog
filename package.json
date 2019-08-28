@@ -7,24 +7,27 @@
   "scripts": {
     "dev": "nuxt --config-file=./config/dev/watch.js",
     "build": "nuxt generate --config-file=./config/dev/build.js",
-    "start": "nuxt start",
-    "generate": "nuxt generate --config-file=./nuxt.config.js",
+    "start": "nuxt start --config-file=./config/dev/watch.js",
+    "generate": "nuxt generate --config-file=./config/dev/build.js",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint"
   },
   "dependencies": {
     "@nuxtjs/dotenv": "^1.1.0",
     "animate.css": "^3.5.2",
+    "axios": "^0.19.0",
     "babel-plugin-component": "^1.1.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-polyfill": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-latest": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "element-ui": "^2.11.1",
     "less": "^3.0.1",
     "less-loader": "^4.1.0",
     "nuxt": "^1.0.0",
     "vue": "^2.5.13",
+    "vue-axios": "^2.1.4",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
